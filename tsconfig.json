@@ -1,0 +1,31 @@
+// https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+{
+  "compilerOptions": {
+    "target": "es5", // ECMAScript target version
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // list of library files to be included in the compilation
+    "allowJs": true, // allow Javascript files to be compiled
+    "skipLibCheck": true, // skip type checking of all declaration files (*.d.ts).
+    "strict": true, // enable all strict types checking
+    "forceConsistentCasingInFileNames": true, // disallow inconsistently-cased references to the same file.
+    "noEmit": true, // do not emit output (meaning do not compile code, only perform type checking)
+    "esModuleInterop": true, // disable namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+    "module": "esnext", // specify module code generation esnext = the next version of JavaScript.
+    "moduleResolution": "node", // resolve modules using Node.js style
+    "resolveJsonModule": true, // include modules imported with .json extension
+    "isolatedModules": true, // perform additional checks to ensure that separate compilation (such as with transpileModule or @babel/plugin-transform-typescript) would be safe.
+    "jsx": "preserve" // support JSX in .tsx files - The preserve mode will keep the JSX as part of the output to be further consumed by another transform step (e.g. Babel). the output will have a .jsx file extension
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
